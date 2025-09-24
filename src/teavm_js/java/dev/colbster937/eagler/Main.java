@@ -13,10 +13,10 @@ import dev.colbster937.eagler.AwtEvent;
 import dev.colbster937.eagler.render.Canvas;
 import dev.colbster937.eagler.render.RenderContext;
 
-import mc4k.M;
+import com.mojang.chambered.ChamberedApplet;
 
 public class Main {
-  private static M game;
+  private static ChamberedApplet game;
   private static Window window;
   private static HTMLDocument doc;
   private static Canvas canvas;
@@ -75,7 +75,7 @@ public class Main {
       resize();
     }
 
-    game = new M(canvas, ctx);
+    game = new ChamberedApplet(canvas, ctx);
     game.start();
 
     canvas.setTabIndex(0);
